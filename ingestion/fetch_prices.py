@@ -32,14 +32,10 @@ class PriceFetcher:
         try:
             all_dfs = []
 
-            for company in self.companies:
-                ticker = company["ticker"]
-
+            for ticker in self.get_tickers():
                 try:
                     df = raw_df[ticker].copy()
                     df["ticker"] = ticker
-                    df["company_name"] = company["company_name"]
-                    df["sector"] = company["sector"]
                     all_dfs.append(df)
 
                 except KeyError:
