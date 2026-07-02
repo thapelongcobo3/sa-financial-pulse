@@ -64,18 +64,20 @@ I picked these across six sectors to give the sector-level analysis enough cover
 | 11 | Shoprite | SHP.JO | Retail |
 | 12 | Woolworths | WHL.JO | Retail |
 | 13 | Clicks | CLS.JO | Retail |
-| 14 | Mr Price | MPC.JO | Retail |
+| 14 | Mr Price | MRP.JO | Retail |
 | 15 | Pick n Pay | PIK.JO | Retail |
 | 16 | MTN | MTN.JO | Telecoms |
 | 17 | Vodacom | VOD.JO | Telecoms |
 | 18 | Telkom | TKG.JO | Telecoms |
-| 19 | MultiChoice | MCG.JO | Telecoms |
+| 19 | Blue Label Unlimited Group Limited | BLU.JO | Telecoms |
 | 20 | Remgro | REM.JO | Diversified |
 | 21 | Naspers | NPN.JO | Technology |
 | 22 | Prosus | PRX.JO | Technology |
 | 23 | Bytes Technology | BYI.JO | Technology |
 | 24 | Datatec | DTC.JO | Technology |
 | 25 | Karooooo | KRO.JO | Technology |
+
+*Note: MultiChoice (MCG.JO) was swapped out for Blue Label Unlimited Group Limited (BLU.JO) in the Telecoms slot — MultiChoice delisted from the JSE on 10 December 2025 after Canal+ completed its acquisition and squeeze-out of remaining shareholders, so the ticker is no longer available via yfinance.*
 
 ---
 
