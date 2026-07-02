@@ -65,7 +65,7 @@ companies = [
         "sector": "Retail"
     },
     {
-        "ticker": "MPC.JO",
+        "ticker": "MRP.JO",
         "company_name": "Mr Price Group Limited",
         "sector": "Retail"
     },
@@ -90,8 +90,8 @@ companies = [
         "sector": "Telecoms"
     },
     {
-        "ticker": "MCG.JO",
-        "company_name": "MultiChoice Group Limited",
+        "ticker": "BLU.JO",
+        "company_name": "Blu Label Unlimited Group Limited",
         "sector": "Telecoms"
     },
     {

@@ -35,6 +35,9 @@ class PriceFetcher:
             for ticker in self.get_tickers():
                 try:
                     df = raw_df[ticker].copy()
+                    if df["Close"].isna().all():
+                        print(f"{ticker} has no data skipping...")
+                        continue
                     df["ticker"] = ticker
                     all_dfs.append(df)
 
