@@ -20,7 +20,9 @@ class PriceFetcher:
             data = yf.download(
                 tickers=self.get_tickers(),
                 period="5d",
-                group_by="ticker"
+                group_by="ticker",
+                auto_adjust=False,
+                actions=True
             )
             return data
 
@@ -39,6 +41,7 @@ class PriceFetcher:
                         print(f"{ticker} has no data skipping...")
                         continue
                     df["ticker"] = ticker
+                    df = df.drop(columns=["Adj Close"])
                     all_dfs.append(df)
 
                 except KeyError:
@@ -79,6 +82,10 @@ def main():
     df = fetcher.build_records(raw)
     if df is None:
         print("Build failed, exiting.")
+        return
+    
+    if df.empty:
+        print("No data collected, exiting without saving.")
         return
 
     fetcher.save_to_csv(df)
