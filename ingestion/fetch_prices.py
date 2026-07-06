@@ -19,7 +19,7 @@ class PriceFetcher:
             print(f"Downloading price data for {len(self.get_tickers())} tickers...")
             data = yf.download(
                 tickers=self.get_tickers(),
-                period="5d",
+                period="3mo",
                 group_by="ticker",
                 auto_adjust=False,
                 actions=True
@@ -65,7 +65,7 @@ class PriceFetcher:
             filename = f"prices_{self.today}.csv"
             path = os.path.join(self.output_dir, filename)
             df.to_csv(path, index=False)
-            print(f"Saved {len(df)} rows to {path}")
+            print(f"\nSaved {len(df)} rows to {path}")
 
         except Exception as e:
             print("Save failed:", e)
