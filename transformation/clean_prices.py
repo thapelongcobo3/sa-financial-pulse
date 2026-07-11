@@ -113,9 +113,6 @@ class PriceTransformer:
                 lambda x: x.rolling(window=30, min_periods=1).mean()
             )
 
-            # Replace natural NaN boundary gaps on row-zero partitions with 0.0
-            df["daily_return_pct"] = df["daily_return_pct"].fillna(0.0)
-
             # Restructure and select exact targeted columns
             target_columns = [
                     "ticker", "company_name", "sector", "trade_date", 
