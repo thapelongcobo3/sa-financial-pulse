@@ -107,7 +107,10 @@ class PriceLoader:
             insert_query += f" ON CONFLICT ({conflict_targets}) DO NOTHING"
 
         # Convert df rows to pyhton tuples
-        data_tuples = [tuple(x) for x in df.to_numpy()]
+        data_tuples = [
+            tuple(None if pd.isna(v) else v for v in row)
+            for row in df.to_numpy()
+        ]
 
         try:
             # insert data
